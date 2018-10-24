@@ -13,6 +13,7 @@ User.java
 
 
 
+```java
     @Entity
 
     public class User {
@@ -29,9 +30,11 @@ User.java
     // but they're required for Room to work.
     }
 
+```
 
 UserDao.java
 
+```java
     @Dao
     public interface UserDao {
     @Query("SELECT * FROM user")
@@ -51,6 +54,7 @@ UserDao.java
     void delete(User user);
     }
 
+```
 
 
 AppDatabase.java
