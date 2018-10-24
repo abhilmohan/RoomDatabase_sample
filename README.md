@@ -55,16 +55,20 @@ UserDao.java
 
 AppDatabase.java
 
+
+```java
    @Database(entities = {User.class}, version = 1)
-   
    public abstract class AppDatabase extends RoomDatabase {
-   
    public abstract UserDao userDao();
-   
-   }
+   }  
+```
+
    
 After creating the files above, you get an instance of the created database using the following code:
 
+
+```java
    AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-   
    AppDatabase.class, "database-name").build();
+```
+   
